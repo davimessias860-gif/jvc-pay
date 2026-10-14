@@ -1,0 +1,1 @@
+const {reply,authenticated,unauthorized}=require('./_shared');exports.handler=async e=>authenticated(e)?reply(200,{ok:true,displayName:process.env.PIX_DISPLAY_NAME||'JVC Auto Peças',splitEnabled:!!(process.env.SPLIT_RECIPIENT_MAIN&&process.env.SPLIT_RECIPIENT_PARTNER)}):unauthorized();

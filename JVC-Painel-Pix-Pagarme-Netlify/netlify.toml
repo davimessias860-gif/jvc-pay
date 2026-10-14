@@ -1,0 +1,17 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+[[redirects]]
+  from = "/login"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/painel"
+  to = "/index.html"
+  status = 200
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
